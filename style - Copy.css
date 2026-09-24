@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* ---------- HERO ---------- */
+
+.header {
+    min-height: 360px;
+    padding: 70px 20px;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(59, 130, 246, 0.35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(16, 185, 129, 0.30),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #172554,
+            #064e3b
+        );
+}
+
+.header h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    line-height: 1.15;
+}
+
+.header p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    color: #dbeafe;
+}
+
+/* ---------- MAIN ---------- */
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: -70px auto 50px;
+    position: relative;
+}
+
+/* ---------- CARD ---------- */
+
+.card {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 24px 55px rgba(15, 23, 42, 0.15);
+}
+
+.card h2 {
+    color: #0f172a;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+/* ---------- FORM ---------- */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #475569;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px 15px;
+    margin-top: 7px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    background: #f8fafc;
+    color: #172033;
+
+    font-size: 15px;
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+}
+
+input:hover,
+select:hover {
+    border-color: #94a3b8;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+/* ---------- BUTTON ---------- */
+
+button {
+    grid-column: 1 / -1;
+
+    margin-top: 10px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0ea5e9
+        );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 25px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ---------- RESULT SECTION ---------- */
+
+.result-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.result-card h2 {
+    grid-column: 1 / -1;
+}
+
+/* ---------- RESULT BOX ---------- */
+
+.result-box {
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef6ff
+        );
+
+    border: 1px solid #e2e8f0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-5px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 12px 25px rgba(15, 23, 42, 0.10);
+}
+
+.result-box h3 {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* ---------- LINKS / BUTTONS ---------- */
+
+a {
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+footer small {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .header {
+        min-height: 320px;
+        padding: 55px 20px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: -50px;
+        margin-bottom: 35px;
+    }
+
+    .card {
+        padding: 22px;
+        border-radius: 18px;
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    button {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .result-card {
+        grid-template-columns: 1fr;
+    }
+
+    .result-card h2 {
+        grid-column: auto;
+    }
+
+    .result-box {
+        padding: 22px;
+    }
+
+    .result-box p {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 28px 15px;
+    }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 400px) {
+
+    .header {
+        padding: 50px 16px;
+    }
+
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .header p {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .card {
+        padding: 19px;
+    }
+
+    input,
+    select {
+        padding: 13px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Smart Fitness Planner</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background:
+                radial-gradient(circle at top left, rgba(37, 99, 235, 0.35), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.25), transparent 35%),
+                linear-gradient(135deg, #0f172a, #172554);
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 420px;
+            padding: 35px;
+
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 22px;
+
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            margin-top: 18px;
+
+            color: #334155;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .note {
+            margin-top: 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="logo">💪</div>
+
+        <h1>Smart Fitness Planner</h1>
+
+        <p class="subtitle">
+            Start your personalized fitness journey
+        </p>
+
+        <form id="loginForm">
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="password">Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">
+                Login & Continue
+            </button>
+
+        </form>
+
+        <p class="note">
+            Demo login for this project
+        </p>
+
+    </div>
+
+    <script>
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const email =
+                    document.getElementById("email").value;
+
+                const password =
+                    document.getElementById("password").value;
+
+                if (email && password) {
+
+                    window.location.href = "index.html";
+
+                }
+
+            });
+    </script>
+
+</body>
+</html>
